@@ -5,7 +5,7 @@
 window.BIRTHDAY_CONTENT = {
   assets: {
     coverVideo: "public/Cover.mp4",
-    coverPoster: "public/pic-1.jpg",
+    coverPoster: "public/coverthumb.jpg",
     heroVideo: "public/hero.mp4",
     music: "public/happy birthday.mp3",
     babyPhoto01: "public/pic-1.jpg",
