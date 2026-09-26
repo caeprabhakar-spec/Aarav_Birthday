@@ -2,7 +2,7 @@
 const CONTENT = window.BIRTHDAY_CONTENT;
 const CONFIG = {
   ASSETS: {
-    COVER_VIDEO_URL: CONTENT.assets.coverVideo, HERO_VIDEO_URL: CONTENT.assets.heroVideo, MUSIC_URL: CONTENT.assets.music,
+    COVER_VIDEO_URL: CONTENT.assets.coverVideo, COVER_POSTER_URL: CONTENT.assets.coverPoster, HERO_VIDEO_URL: CONTENT.assets.heroVideo, MUSIC_URL: CONTENT.assets.music,
     BABY_PHOTO_01: CONTENT.assets.babyPhoto01, BABY_PHOTO_02: CONTENT.assets.babyPhoto02,
     PARENTS_PHOTO: CONTENT.assets.parentsPhoto, GRANDPARENTS_PHOTO: CONTENT.assets.grandparentsPhoto,
     DECORATIVE_BACKGROUND: CONTENT.assets.decorativeBackground
@@ -34,6 +34,8 @@ function applyConfig() {
     [".thankyou__photo img", CONFIG.ASSETS.BABY_PHOTO_01]
   ];
   assetTargets.forEach(([selector, url]) => { const target = $(selector); if (target && url) target.src = url; });
+  const coverVideo = $("#coverVideo");
+  if (coverVideo && CONFIG.ASSETS.COVER_POSTER_URL) coverVideo.poster = CONFIG.ASSETS.COVER_POSTER_URL;
   if (CONFIG.ASSETS.DECORATIVE_BACKGROUND) document.documentElement.style.setProperty("--decorative-background", `url("${CONFIG.ASSETS.DECORATIVE_BACKGROUND}")`);
   const heroPoster = $("#heroVideo");
   if (heroPoster && CONFIG.ASSETS.BABY_PHOTO_01) heroPoster.poster = CONFIG.ASSETS.BABY_PHOTO_01;
